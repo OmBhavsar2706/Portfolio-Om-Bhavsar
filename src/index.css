@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Syne:wght@700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-display: 'Cormorant Garamond', serif;
+  --font-syne: 'Syne', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Custom high-end colors from design system specs */
+  --color-brand-bg-light: #E6E8EB;
+  --color-brand-card-light: #FAFBFB;
+  --color-brand-text-light: #1E2638;
+  --color-brand-accent-light: #3B82F6;
+  --color-brand-border-light: #D2D5DA;
+
+  --color-brand-bg-dark: #050505;
+  --color-brand-card-dark: #0B0B0C;
+  --color-brand-text-dark: #F1F5F9;
+  --color-brand-accent-dark: #60A5FA;
+  --color-brand-border-dark: #1E1E21;
+}
+
+@variant dark (&:where(.dark, .dark *));
+
+/* Custom Global Body and Smooth scroll */
+:root {
+  --experience-card-bg: #FAFBFB;
+}
+
+html.dark {
+  --experience-card-bg: #0B0B0C;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-brand-bg-light);
+  color: var(--color-brand-text-light);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+html.dark body {
+  background-color: var(--color-brand-bg-dark);
+  color: var(--color-brand-text-dark);
+}
+
+/* Premium radial dot grid only visible in dark mode */
+.bg-grid-dots {
+  background-image: radial-gradient(rgba(148, 163, 184, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Custom premium lunar atmospheric glow */
+.lunar-curve {
+  background: radial-gradient(circle at 50% -120%, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 40%, rgba(0, 0, 0, 0) 70%);
+}
+
+.lunar-border {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Text linear gradients */
+.text-gradient-cosmic {
+  background: linear-gradient(135deg, #60A5FA 0%, #3B82F6 40%, #D946EF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom visual scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+html.dark ::-webkit-scrollbar-track {
+  background: #0B1120;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Custom infinite marquee for tech skills preview moving left-to-right */
+@keyframes marquee-ltr {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.animate-marquee-ltr {
+  display: flex;
+  width: max-content;
+  animation: marquee-ltr 30s linear infinite;
+}
+
+.animate-marquee-ltr:hover {
+  animation-play-state: paused;
+}
+
+
