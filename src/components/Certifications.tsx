@@ -62,10 +62,18 @@ export default function Certifications() {
             description: row.description || '',
             image: row.image || null
           }));
-          setCerts(formatted);
+          
+          const dbIds = new Set(formatted.map(c => c.id));
+          const dbTitles = new Set(formatted.map(c => c.title.toLowerCase()));
+          const filteredInitial = initialCertifications.filter(
+            c => !dbIds.has(c.id) && !dbTitles.has(c.title.toLowerCase())
+          );
+
+          const combined = [...formatted, ...filteredInitial];
+          setCerts(combined);
           setDbStatus('connected');
           // Sync with local storage
-          localStorage.setItem('user_portfolio_certifications', JSON.stringify(formatted));
+          localStorage.setItem('user_portfolio_certifications', JSON.stringify(combined));
         } else {
           // If Supabase table is empty, fall back to localStorage/empty
           setDbStatus('connected');
@@ -80,17 +88,16 @@ export default function Certifications() {
 
     function loadFallback() {
       const saved = localStorage.getItem('user_portfolio_certifications');
+      let customCerts: Certification[] = [];
       if (saved) {
         try {
           const parsed = JSON.parse(saved);
-          const customCerts = parsed.filter((c: Certification) => !['cert-1', 'cert-2', 'cert-3', 'cert-4', 'cert-5'].includes(c.id));
-          setCerts(customCerts);
+          customCerts = parsed.filter((c: Certification) => !['cert-1', 'cert-2', 'cert-3', 'cert-4', 'cert-5'].includes(c.id));
         } catch (e) {
-          setCerts([]);
+          customCerts = [];
         }
-      } else {
-        setCerts([]);
       }
+      setCerts([...customCerts, ...initialCertifications]);
     }
 
     fetchCertifications();
@@ -235,32 +242,8 @@ export default function Certifications() {
             </p>
           </div>
 
-          {/* Secure Admin Control Panel Anchor */}
+          {/* Secure Admin Control Panel Anchor (Controls Hidden for Production) */}
           <div className="flex items-center gap-3 shrink-0 self-start md:self-end">
-            {/* Supabase status badge */}
-            <div 
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-900/60 dark:hover:bg-neutral-900/90 text-[10px] font-mono border border-neutral-200/50 dark:border-neutral-800 transition-colors cursor-help" 
-              title={`Database status: ${dbStatus}`}
-            >
-              <Database className={`w-3 h-3 ${dbStatus === 'connected' ? 'text-emerald-500 animate-pulse' : dbStatus === 'connecting' ? 'text-amber-500 animate-spin' : 'text-neutral-400'}`} />
-              <span className="text-neutral-500 dark:text-neutral-400 font-bold uppercase tracking-wider">
-                {dbStatus === 'connected' ? 'Cloud Live' : dbStatus === 'connecting' ? 'Connecting' : 'Local Fallback'}
-              </span>
-            </div>
-
-            {/* Secret key toggle for admin/editor controls */}
-            <button
-              onClick={() => setIsAdminMode(!isAdminMode)}
-              className={`p-2 rounded-full border transition-all cursor-pointer ${
-                isAdminMode 
-                  ? 'bg-[#B497CF]/20 text-[#B497CF] border-[#B497CF]/40 rotate-12 scale-105' 
-                  : 'bg-neutral-50 text-neutral-400 border-neutral-200 dark:bg-[#0B0B0C] dark:border-neutral-800 dark:text-neutral-600 hover:text-neutral-900 dark:hover:text-neutral-300'
-              }`}
-              title="Toggle Cert Manager"
-            >
-              <Key className="w-4.5 h-4.5" />
-            </button>
-
             {/* Dynamic Admin Action Trigger */}
             <AnimatePresence>
               {isAdminMode && (
@@ -699,20 +682,6 @@ export default function Certifications() {
                       Verified
                     </span>
                   </div>
-
-                  {isAdminMode && (
-                    <button
-                      onClick={(e) => {
-                        handleDelete(viewingCert.id, e);
-                        setViewingCert(null);
-                      }}
-                      className="inline-flex items-center gap-1.5 px-3.5 py-2 border border-red-100 hover:border-red-500 dark:border-red-950 hover:bg-red-50 dark:hover:bg-red-950/20 text-red-600 dark:text-red-400 transition-all rounded-xl text-xs font-bold uppercase tracking-wider shrink-0 cursor-pointer"
-                      title="Delete Certificate"
-                    >
-                      <Trash2 className="w-3.5 h-3.5" />
-                      Delete
-                    </button>
-                  )}
 
                   {viewingCert.credentialUrl && viewingCert.credentialUrl !== '#' && (
                     <a 

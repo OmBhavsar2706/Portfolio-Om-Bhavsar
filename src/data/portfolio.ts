@@ -261,31 +261,46 @@ export const certifications: Certification[] = [
     id: "cert-1",
     title: "Programming Languages Certification",
     issuer: "Industry Verified Standard Reference",
-    date: "2025"
+    date: "2025",
+    credentialId: "PL-VER-2025-X7",
+    credentialUrl: "https://github.com/OmBhavsar2706",
+    description: "Comprehensive assessment covering foundational and advanced programming paradigms, syntax compilation, and execution structures across multiple programming environments."
   },
   {
     id: "cert-2",
     title: "Java Programming Credential",
     issuer: "National Tech Assessment Board",
-    date: "2025"
+    date: "2025",
+    credentialId: "JV-PCH-2025-99",
+    credentialUrl: "https://github.com/OmBhavsar2706",
+    description: "Validated proficiency in Java programming, including Object-Oriented Programming (OOP) concepts, data structures, multithreading, and platform-independent development paradigms."
   },
   {
     id: "cert-3",
     title: "Cybersecurity Job Simulation Project",
     issuer: "Deloitte Australia",
-    date: "2025"
+    date: "2025",
+    credentialId: "FORAGE-DEL-CYBER-1",
+    credentialUrl: "https://www.theforage.com/simulations/deloitte-au/cybersecurity-da",
+    description: "Completed a simulated cybersecurity engineering program with Deloitte Australia. Designed security blueprints, executed analysis workflows, and conducted structural threat simulations."
   },
   {
     id: "cert-4",
     title: "Software Engineering Job Simulation",
     issuer: "Electronic Arts (EA Sports)",
-    date: "2025"
+    date: "2025",
+    credentialId: "FORAGE-EA-SWE-3",
+    credentialUrl: "https://www.theforage.com/simulations/electronic-arts/software-engineering-api",
+    description: "Completed Electronic Arts (EA Sports) Software Engineering Job Simulation. Optimized system classes, implemented game API loops, and conducted structural system stress tests."
   },
   {
     id: "cert-5",
     title: "Certified Internship Program (CIP)",
     issuer: "National Educational Council Approved Reference",
-    date: "2024"
+    date: "2024",
+    credentialId: "CIP-NEC-2024-42",
+    credentialUrl: "https://github.com/OmBhavsar2706",
+    description: "A comprehensive, certified engineering internship program approved by the National Educational Council, focusing on full-stack application logic and machine learning deployment."
   }
 ];
 
