@@ -16,7 +16,7 @@ import {
 const PRESETS_P1 = [
   {
     name: 'Vintage Wear',
-    url: '/src/assets/images/regenerated_image_1780997714055.jpg'
+    url: '/projects/thrift_crew.jpg'
   },
   {
     name: 'Store Display',
@@ -35,7 +35,7 @@ const PRESETS_P1 = [
 const PRESETS_P2 = [
   {
     name: 'Retro Jersey Customizer',
-    url: '/src/assets/images/regenerated_image_1780997710159.png'
+    url: '/projects/jersey_unicorn.png'
   },
   {
     name: 'Soccer Kit Theme',

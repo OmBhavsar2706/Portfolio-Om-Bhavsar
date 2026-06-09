@@ -166,7 +166,7 @@ export const projects: Project[] = [
     title: "My Thrift Crew",
     description: "A premium fashion-forward collaborative thrift catalog and vintage apparel marketplace, enabling teams to showcase and curate hand-picked aesthetic clothing lines with sub-second responsive performance and modern layout.",
     longDescription: "My Thrift Crew is a bespoke fashion-forward platform for community thrift catalogs and aesthetic apparel collection curations. It allows user collectives to collaboratively organize clothing portfolios, manage vintage styling lines, and present their selections seamlessly on a high-speed, image-optimized modern workspace.",
-    thumbnail: "/src/assets/images/regenerated_image_1780997714055.jpg",
+    thumbnail: "/projects/thrift_crew.jpg",
     tags: ["React", "Vite", "Tailwind CSS", "Framer Motion", "Guest Sync", "Vercel"],
     features: [
       "Collaborative thrift catalog boards with custom curation sorting triggers",
@@ -183,7 +183,7 @@ export const projects: Project[] = [
     title: "Jersey Unicorn",
     description: "A high-end sports apparel customizer and premium e-commerce platform specializing in exclusive vintage jersey collections and AI-driven kit customization recommendations.",
     longDescription: "Jersey Unicorn is a showcase of elite digital merchandising. It integrates a live kit design tool (badge placements, custom name and numbering overlays, collar types) with a high-speed storefront. Equipped with smart stock-level verification and a simulated client-side AI stylist to suggest matching team apparel based on shopping cart context.",
-    thumbnail: "/src/assets/images/regenerated_image_1780997710159.png",
+    thumbnail: "/projects/jersey_unicorn.png",
     tags: ["React", "Vite", "Tailwind CSS", "Express.js", "Node.js", "AI Recommendations", "Razorpay Sim"],
     features: [
       "Real-time kit builder allowing dynamic name, font size, and number customization previews",

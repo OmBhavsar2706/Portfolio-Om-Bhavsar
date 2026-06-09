@@ -202,7 +202,7 @@ export default function Hero({ setActivePart }: HeroProps) {
               id="hero-abstract-art"
             >
               <img
-                src="/src/assets/images/regenerated_image_1780824904222.png"
+                src="/images/hero_portrait.png"
                 alt="Om Bhavsar - AI & ML Engineer Portrait"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                 referrerPolicy="no-referrer"

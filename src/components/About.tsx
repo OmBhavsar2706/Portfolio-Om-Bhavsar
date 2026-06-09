@@ -132,7 +132,7 @@ export default function About() {
               id="about-portrait-card"
             >
               <img
-                src="/src/assets/images/regenerated_image_1780841639917.png"
+                src="/images/about_portrait.png"
                 alt="Om Bhavsar - AI & ML Innovator Portrait"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                 referrerPolicy="no-referrer"
