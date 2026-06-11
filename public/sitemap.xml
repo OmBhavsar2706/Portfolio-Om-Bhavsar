@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main Home Page -->
+  <url>
+    <loc>https://portfolio-om-bhavsar-esqg1g8dj-ombhavsar2706s-projects.vercel.app/</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <!-- About & Education Section -->
+  <url>
+    <loc>https://portfolio-om-bhavsar-esqg1g8dj-ombhavsar2706s-projects.vercel.app/?section=about</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Work Experience Section -->
+  <url>
+    <loc>https://portfolio-om-bhavsar-esqg1g8dj-ombhavsar2706s-projects.vercel.app/?section=experience</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Tech Skills & Certifications Section -->
+  <url>
+    <loc>https://portfolio-om-bhavsar-esqg1g8dj-ombhavsar2706s-projects.vercel.app/?section=skills</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Portfolio Projects Section -->
+  <url>
+    <loc>https://portfolio-om-bhavsar-esqg1g8dj-ombhavsar2706s-projects.vercel.app/?section=work</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Contact & Services Section -->
+  <url>
+    <loc>https://portfolio-om-bhavsar-esqg1g8dj-ombhavsar2706s-projects.vercel.app/?section=contact</loc>
+    <lastmod>2026-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

@@ -1,0 +1,6 @@
+# Group 1: All crawl bots welcome
+User-agent: *
+Allow: /
+
+# Sitemaps declaration
+Sitemap: https://portfolio-om-bhavsar-esqg1g8dj-ombhavsar2706s-projects.vercel.app/sitemap.xml
