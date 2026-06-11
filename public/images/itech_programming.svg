@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="100%" height="100%">
+  <!-- Background & Classic Border layout -->
+  <rect width="800" height="560" fill="#FCFCFD" rx="12"/>
+  <!-- Classic Golden-Brown Ornamental Border -->
+  <rect x="25" y="25" width="750" height="510" fill="none" stroke="#2B2D42" stroke-width="6" rx="6"/>
+  <rect x="35" y="35" width="730" height="490" fill="none" stroke="#D1804B" stroke-width="2" rx="4"/>
+  
+  <!-- Side accent panels in elegant gold/brown -->
+  <path d="M 35 35 L 200 35 L 35 150 Z" fill="#D1804B" opacity="0.9"/>
+  <path d="M 765 35 L 600 35 L 765 150 Z" fill="#D1804B" opacity="0.9"/>
+  <path d="M 35 525 L 200 525 L 35 410 Z" fill="#D1804B" opacity="0.9"/>
+  <path d="M 765 525 L 600 525 L 765 410 Z" fill="#D1804B" opacity="0.9"/>
+
+  <!-- Logo Group -->
+  <g transform="translate(100, 75)">
+    <text x="0" y="22" font-family="'Inter', sans-serif" font-size="28" font-weight="900" fill="#2B2D42" letter-spacing="-0.5px">
+      I-TECH
+    </text>
+    <text x="0" y="44" font-family="'Inter', sans-serif" font-size="20" font-weight="500" fill="#D1804B" letter-spacing="4px">
+      SYSTEM
+    </text>
+  </g>
+
+  <!-- Title Center Header -->
+  <text x="400" y="175" font-family="'Inter', sans-serif" font-size="34" font-weight="800" fill="#2B2D42" letter-spacing="6px" text-anchor="middle">
+    CERTIFICATE
+  </text>
+  <text x="400" y="200" font-family="'Inter', sans-serif" font-size="10" font-weight="700" fill="#D1804B" letter-spacing="2px" text-anchor="middle">
+    CERT NO: CR25-01603
+  </text>
+
+  <!-- Statement -->
+  <text x="400" y="245" font-family="'Playfair Display', serif" font-size="13" font-style="italic" fill="#5F6368" text-anchor="middle">
+    This Is To Certify That
+  </text>
+
+  <!-- Recipient Name -->
+  <text x="400" y="285" font-family="'Inter', sans-serif" font-size="28" font-weight="800" fill="#2B2D42" text-anchor="middle" letter-spacing="1px">
+    BHAVSAR OM VINAYAK
+  </text>
+  <line x1="250" y1="298" x2="550" y2="298" stroke="#D1804B" stroke-width="1.5"/>
+
+  <!-- Course completion specifications -->
+  <text x="400" y="328" font-family="'Playfair Display', serif" font-size="13" font-style="italic" fill="#5F6368" text-anchor="middle">
+    Has Successfully Completed The Course Of
+  </text>
+
+  <text x="400" y="358" font-family="'Inter', sans-serif" font-size="15" font-weight="800" fill="#D1804B" text-anchor="middle">
+    PROGRAMMING LANGUAGES (C, C++, CORE JAVA AND PYTHON)
+  </text>
+
+  <text x="400" y="392" font-family="'Inter', sans-serif" font-size="12" fill="#5F6368" text-anchor="middle">
+    In The Month Of <tspan font-weight="700" fill="#2B2D42">AUGUST 2025</tspan>
+  </text>
+
+  <text x="400" y="415" font-family="'Inter', sans-serif" font-size="12" fill="#5F6368" text-anchor="middle">
+    From <tspan font-weight="700" fill="#2B2D42">I-Tech System, Nashik</tspan>.
+  </text>
+
+  <!-- Golden Medal Stamp Graphic in Center-Right Upper corner -->
+  <g transform="translate(565, 100)">
+    <circle cx="0" cy="0" r="35" fill="#D1804B" opacity="0.15"/>
+    <circle cx="0" cy="0" r="28" fill="#D1804B"/>
+    <circle cx="0" cy="0" r="24" fill="none" stroke="#FFFFFF" stroke-width="1"/>
+    <!-- Medal Ribbon tail -->
+    <path d="M-10 15 L-18 42 L0 34 L18 42 L10 15 Z" fill="#904B1E"/>
+    <path d="M-5 15 L-10 45 L0 38 L10 45 L5 15 Z" fill="#D1804B"/>
+    <text x="0" y="-2" font-family="'Inter', sans-serif" font-size="5" font-weight="bold" fill="#FFFFFF" text-anchor="middle">I-TECH</text>
+    <text x="0" y="5" font-family="'Inter', sans-serif" font-size="5" font-weight="bold" fill="#FFFFFF" text-anchor="middle">SYSTEM</text>
+  </g>
+
+  <!-- Fine Print Footer details -->
+  <text x="400" y="500" font-family="'Inter', sans-serif" font-size="8" fill="#5F6368" text-anchor="middle">
+    Off: 09, Sumangal Luxuria, 3rd Floor, Krishi Nagar, College Road, Nashik-422005. Ph 02532582186
+  </text>
+  <text x="400" y="514" font-family="'Inter', sans-serif" font-size="8.5" fill="#2B2D42" font-weight="500" text-anchor="middle">
+    Reg. No. 1720600310940645   |   Website: www.itechnasik.com   |   Email: info@itechnasik.com
+  </text>
+
+  <!-- Authorized Signature line -->
+  <g transform="translate(620, 435)">
+    <path d="M 5 15 Q 30 0 50 15 T 95 5" fill="none" stroke="#2C3E50" stroke-width="1.2"/>
+    <text x="50" y="20" font-family="'Inter', sans-serif" font-style="italic" font-weight="700" font-size="12" fill="#2B2D42" text-anchor="middle">VDeore</text>
+    <line x1="0" y1="24" x2="105" y2="24" stroke="#D1804B" stroke-width="1"/>
+    <text x="52" y="34" font-family="'Inter', sans-serif" font-size="9" font-weight="bold" fill="#2B2D42" text-anchor="middle">Authorized Signature</text>
+  </g>
+</svg>

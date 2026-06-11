@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="100%" height="100%">
+  <!-- Background & Border layout -->
+  <rect width="800" height="560" fill="#FFFFFF" rx="12"/>
+  <rect x="25" y="25" width="750" height="510" fill="none" stroke="#001F54" stroke-width="6" rx="8"/>
+
+  <!-- Top-Left & Bottom-Right Decorative Geometrics (CodSoft Style) -->
+  <path d="M 25 25 L 180 25 L 25 100 Z" fill="#0D3B66"/>
+  <path d="M 25 25 L 100 25 L 25 180 Z" fill="#001F54" opacity="0.6"/>
+  <path d="M 775 535 L 620 535 L 775 460 Z" fill="#0D3B66"/>
+  <path d="M 775 535 L 700 535 L 775 380 Z" fill="#001F54" opacity="0.6"/>
+
+  <!-- Certificate ID Header -->
+  <text x="250" y="60" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#0D3B66">
+    C.ID: 5100bc4
+  </text>
+
+  <!-- Codsoft Brand Header (Right align) -->
+  <g transform="translate(560, 45)">
+    <!-- Logo Symbol -->
+    <circle cx="20" cy="18" r="14" fill="none" stroke="#2B2D42" stroke-width="2"/>
+    <circle cx="20" cy="18" r="10" fill="none" stroke="#D9383A" stroke-width="3" stroke-dasharray="14,10"/>
+    <text x="42" y="26" font-family="'Inter', sans-serif" font-size="28" font-weight="800" fill="#0D3B66" letter-spacing="-1px">
+      CodSoft
+    </text>
+  </g>
+
+  <!-- Main Title Area -->
+  <g transform="translate(400, 155)" text-anchor="middle">
+    <text y="0" font-family="'Inter', sans-serif" font-size="34" font-weight="900" fill="#0B132B" letter-spacing="4px">
+      CERTIFICATE
+    </text>
+    <text y="24" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#1C2541" letter-spacing="2px">
+      OF COMPLETION
+    </text>
+    <text y="38" font-family="'Inter', sans-serif" font-size="9" font-style="italic" fill="#5C677D">
+      PROUDLY PRESENTED TO
+    </text>
+  </g>
+
+  <!-- Recipient name -->
+  <text x="400" y="245" font-family="'Playfair Display', 'Georgia', serif" font-size="30" font-weight="700" fill="#0D3B66" text-anchor="middle">
+    Om Bhavsar
+  </text>
+  <line x1="220" y1="258" x2="580" y2="258" stroke="#0D3B66" stroke-width="1.5"/>
+
+  <!-- Statement Details -->
+  <g transform="translate(400, 290)" text-anchor="middle" font-family="'Inter', sans-serif" font-size="12.5" fill="#3A405A">
+    <text y="0">
+      has successfully completed 4 weeks of a virtual internship program in
+    </text>
+    <text y="24" font-weight="800" fill="#001F54" font-size="15">
+      C++ Programming
+    </text>
+    <text y="48">
+      with wonderful remarks at <tspan font-weight="800" fill="#0D3B66">CODSOFT</tspan> from <tspan font-weight="700">01/09/2024 to 30/09/2024</tspan>.
+    </text>
+    <text y="80" font-size="11" fill="#5C677D">
+      We were truly amazed by his/her showcased skills and invaluable contributions to
+    </text>
+    <text y="96" font-size="11" fill="#5C677D">
+      the tasks and projects throughout the internship.
+    </text>
+  </g>
+
+  <!-- ISO Stamps group in Footer -->
+  <g transform="translate(420, 440)">
+    <!-- ISO stamp -->
+    <g transform="translate(140, 20)">
+      <circle cx="0" cy="0" r="24" fill="none" stroke="#0D3B66" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="21" fill="none" stroke="#0D3B66" stroke-width="0.5" stroke-dasharray="2,2"/>
+      <text x="0" y="-8" font-family="'Inter', sans-serif" font-size="6.5" font-weight="800" fill="#001F54" text-anchor="middle">CERTIFIED</text>
+      <text x="0" y="3" font-family="'Inter', sans-serif" font-size="8" font-weight="900" fill="#D9383A" text-anchor="middle">ISO</text>
+      <text x="0" y="11" font-family="'Inter', sans-serif" font-size="5.5" fill="#001F54" font-weight="bold" text-anchor="middle">9001:2015</text>
+      <text x="0" y="17" font-family="'Inter', sans-serif" font-size="4.5" fill="#5C677D" text-anchor="middle">COMPANY</text>
+    </g>
+    
+    <!-- MSME stamp -->
+    <g transform="translate(240, 20)">
+      <rect x="-24" y="-18" width="48" height="34" rx="4" fill="none" stroke="#0D3B66" stroke-width="1.5"/>
+      <text x="0" y="-8" font-family="'Inter', sans-serif" font-size="7" font-weight="900" fill="#001F54" text-anchor="middle">MSME</text>
+      <text x="0" y="2" font-family="'Inter', sans-serif" font-size="5" fill="#5C677D" text-anchor="middle" font-weight="bold">MICRO, SMALL &amp; MEDIUM</text>
+      <text x="0" y="9" font-family="'Inter', sans-serif" font-size="5" fill="#5C677D" text-anchor="middle" font-weight="bold">ENTERPRISES</text>
+    </g>
+  </g>
+
+  <!-- Left: Founder Signature -->
+  <g transform="translate(160, 450)">
+    <path d="M 5 20 Q 25 -5 45 25 T 90 5" fill="none" stroke="#2C3E50" stroke-width="1.2"/>
+    <line x1="0" y1="30" x2="110" y2="30" stroke="#0D3B66" stroke-width="1"/>
+    <text x="55" y="42" font-family="'Inter', sans-serif" font-size="9.5" font-weight="bold" fill="#0D3B66" text-anchor="middle">Founder</text>
+  </g>
+
+  <!-- Bottom Details footer -->
+  <g transform="translate(50, 520)" font-family="'Inter', sans-serif" font-size="8.5" fill="#5C677D">
+    <text x="0" y="0">contact@codsoft.in</text>
+    <text x="350" y="0" text-anchor="middle">www.codsoft.co.in</text>
+    <text x="680" y="0" text-anchor="end">Date: 03/10/2024</text>
+  </g>
+</svg>

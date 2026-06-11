@@ -240,8 +240,12 @@ Make responses conversational, highly readable, concise, and structured (no more
   app.post('/api/send-email', async (req, res) => {
     const { name, email, subject, message } = req.body;
     
+    const fromEmail = process.env.RESEND_FROM_EMAIL || 'Portfolio Contact <onboarding@resend.dev>';
+    const toEmail = process.env.RESEND_TO_EMAIL || 'ombhavsar552@gmail.com';
+
     console.log('--- EMAIL NOTIFICATION RECEIVED ---');
-    console.log('Recipient: ombhavsar552@gmail.com');
+    console.log(`Sender Config (From): ${fromEmail}`);
+    console.log(`Recipient Config (To): ${toEmail}`);
     console.log(`Inquirer: ${name} <${email}>`);
     console.log(`Subject: ${subject || '(No Subject)'}`);
     
@@ -250,7 +254,7 @@ Make responses conversational, highly readable, concise, and structured (no more
     if (!resendApiKey) {
       console.error('❌ Configuration Error: RESEND_API_KEY environment variable is not set. Please configure it in your server environment variables.');
       return res.status(500).json({
-        error: 'RESEND_API_KEY is not configured on the server. Please define the RESEND_API_KEY environment variable in your deployment configuration.'
+        error: 'RESEND_API_KEY is not configured on the server. Please define the RESEND_API_KEY environment variable in your deployment configuration in the Settings menu.'
       });
     }
 
@@ -261,15 +265,26 @@ Make responses conversational, highly readable, concise, and structured (no more
       
       console.log('Attempting to send email via Resend API...');
       const result = await resendClient.emails.send({
-        from: 'Portfolio Contact <onboarding@resend.dev>',
-        to: 'ombhavsar552@gmail.com',
-        subject: 'New Portfolio Inquiry',
+        from: fromEmail,
+        to: toEmail,
+        subject: subject ? `Portfolio Query: ${subject}` : 'New Portfolio Inquiry',
+        replyTo: email,
         text: formattedBody,
       });
 
       if (result.error) {
         console.error('❌ Resend API returned error:', result.error);
-        return res.status(400).json({ error: result.error.message, code: result.error.name });
+        
+        // Add specific diagnostic help
+        let suggestHelp = '';
+        if (result.error.name === 'validation_error' || result.error.message?.includes('verify')) {
+          suggestHelp = ' (Hint: If you verified a custom domain on your Resend account, you MUST set the RESEND_FROM_EMAIL environment variable to an email on your custom domain, e.g. "contact@yourdomain.com". If you are using onboarding@resend.dev, ensure you are sending to the single email address used to sign up for Resend).';
+        }
+
+        return res.status(400).json({ 
+          error: `${result.error.message}${suggestHelp}`, 
+          code: result.error.name 
+        });
       }
 
       console.log('✅ Email notification dispatched successfully! Resend Response ID:', result.data?.id);

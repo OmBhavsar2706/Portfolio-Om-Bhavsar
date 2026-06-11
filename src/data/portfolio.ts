@@ -259,48 +259,52 @@ export const services: Service[] = [
 export const certifications: Certification[] = [
   {
     id: "cert-1",
-    title: "Programming Languages Certification",
-    issuer: "Industry Verified Standard Reference",
-    date: "2025",
-    credentialId: "PL-VER-2025-X7",
-    credentialUrl: "https://github.com/OmBhavsar2706",
-    description: "Comprehensive assessment covering foundational and advanced programming paradigms, syntax compilation, and execution structures across multiple programming environments."
+    title: "Java Programming",
+    issuer: "SIMPLILEARN",
+    date: "2026",
+    credentialId: "10043103",
+    description: "Completed Java Programming online course from simplilearn",
+    image: "/images/simplilearn_java.svg"
   },
   {
     id: "cert-2",
-    title: "Java Programming Credential",
-    issuer: "National Tech Assessment Board",
+    title: "EA Software Engineering Job Simulation",
+    issuer: "FORAGE",
     date: "2025",
-    credentialId: "JV-PCH-2025-99",
-    credentialUrl: "https://github.com/OmBhavsar2706",
-    description: "Validated proficiency in Java programming, including Object-Oriented Programming (OOP) concepts, data structures, multithreading, and platform-independent development paradigms."
+    credentialId: "b2nihk9AaJxZ2bJ26",
+    credentialUrl: "https://www.theforage.com/completion-certificates/j43dGscQHtJJ57N54/a77WE3de8qrxWferQ_j43dGscQHtJJ57N54_692ff700400c58d8a4aeb198_1765911022149_completion_certificate.pdf",
+    description: "Completed Electronic Arts (EA Sports) Software Engineering Job Simulation, designing features, creating classes, and optimizing systems.",
+    image: "/images/forage_ea.svg"
   },
   {
     id: "cert-3",
-    title: "Cybersecurity Job Simulation Project",
-    issuer: "Deloitte Australia",
+    title: "Deloitte Cyber Job Simulation",
+    issuer: "FORAGE",
     date: "2025",
-    credentialId: "FORAGE-DEL-CYBER-1",
-    credentialUrl: "https://www.theforage.com/simulations/deloitte-au/cybersecurity-da",
-    description: "Completed a simulated cybersecurity engineering program with Deloitte Australia. Designed security blueprints, executed analysis workflows, and conducted structural threat simulations."
+    credentialId: "pK8YPoshTDQtitDND",
+    credentialUrl: "https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/E9pA6qsdbeyEkp3ti_9PBTqmSxAf6zZTseP_692ff700400c58d8a4aeb198_1764943745777_completion_certificate.pdf",
+    description: "Completed the Deloitte Australia Cyber Security Job Simulation (Forage), demonstrating core Security Operations and Incident Response skills.",
+    image: "/images/forage_deloitte.svg"
   },
   {
     id: "cert-4",
-    title: "Software Engineering Job Simulation",
-    issuer: "Electronic Arts (EA Sports)",
+    title: "Programming Languages",
+    issuer: "I-Tech System",
     date: "2025",
-    credentialId: "FORAGE-EA-SWE-3",
-    credentialUrl: "https://www.theforage.com/simulations/electronic-arts/software-engineering-api",
-    description: "Completed Electronic Arts (EA Sports) Software Engineering Job Simulation. Optimized system classes, implemented game API loops, and conducted structural system stress tests."
+    credentialId: "CR25-01603",
+    credentialUrl: "https://itechnasik.com/certificate-cr25-01603-bhavsar-om-vinayak/",
+    description: "Completed a comprehensive course covering C, C++, Core Java, and Python with hands-on technical programming paradigms at I-Tech System, Nashik.",
+    image: "/images/itech_programming.svg"
   },
   {
     id: "cert-5",
     title: "Certified Internship Program (CIP)",
-    issuer: "National Educational Council Approved Reference",
+    issuer: "Codsoft",
     date: "2024",
-    credentialId: "CIP-NEC-2024-42",
-    credentialUrl: "https://github.com/OmBhavsar2706",
-    description: "A comprehensive, certified engineering internship program approved by the National Educational Council, focusing on full-stack application logic and machine learning deployment."
+    credentialId: "5100bc4",
+    credentialUrl: "https://codsoft.co.in/",
+    description: "Completed 4 weeks of virtual internship program in C++ Programming at CodSoft, demonstrating excellent technical capability.",
+    image: "/images/codsoft_cert.svg"
   }
 ];
 

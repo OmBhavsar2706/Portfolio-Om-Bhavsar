@@ -40,6 +40,27 @@ export default function Certifications() {
 
   // Load from Supabase with localStorage backup
   useEffect(() => {
+    function deduplicateCertifications(list: Certification[]): Certification[] {
+      const seenTitles = new Set<string>();
+      const seenCredentialIds = new Set<string>();
+      const seenIds = new Set<string>();
+      
+      return list.filter(c => {
+        const titleVal = (c.title || '').trim().toLowerCase();
+        const credIdVal = (c.credentialId || '').trim().toLowerCase();
+        const idVal = c.id;
+        
+        if (seenIds.has(idVal)) return false;
+        if (seenTitles.has(titleVal)) return false;
+        if (credIdVal && seenCredentialIds.has(credIdVal)) return false;
+        
+        seenIds.add(idVal);
+        seenTitles.add(titleVal);
+        if (credIdVal) seenCredentialIds.add(credIdVal);
+        return true;
+      });
+    }
+
     async function fetchCertifications() {
       try {
         const { data, error } = await supabase
@@ -63,13 +84,7 @@ export default function Certifications() {
             image: row.image || null
           }));
           
-          const dbIds = new Set(formatted.map(c => c.id));
-          const dbTitles = new Set(formatted.map(c => c.title.toLowerCase()));
-          const filteredInitial = initialCertifications.filter(
-            c => !dbIds.has(c.id) && !dbTitles.has(c.title.toLowerCase())
-          );
-
-          const combined = [...formatted, ...filteredInitial];
+          const combined = deduplicateCertifications([...formatted, ...initialCertifications]);
           setCerts(combined);
           setDbStatus('connected');
           // Sync with local storage
@@ -97,7 +112,8 @@ export default function Certifications() {
           customCerts = [];
         }
       }
-      setCerts([...customCerts, ...initialCertifications]);
+      const combined = deduplicateCertifications([...customCerts, ...initialCertifications]);
+      setCerts(combined);
     }
 
     fetchCertifications();
