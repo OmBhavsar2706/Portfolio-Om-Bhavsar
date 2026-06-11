@@ -266,7 +266,7 @@ export default function Experience() {
           <motion.div
             initial={{ height: 0 }}
             whileInView={{ height: 'calc(100% - 48px)' }}
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: true, margin: "-15px" }}
             transition={{ duration: 1.5, ease: "easeInOut" }}
             className="absolute left-[12px] md:left-[24px] top-6 w-[2px] bg-gradient-to-b from-[#EAB308] via-[#B497CF] to-[#3B82F6] origin-top rounded-full z-0"
           />
@@ -284,7 +284,7 @@ export default function Experience() {
                     <motion.div
                       initial={{ scale: 0, opacity: 0 }}
                       whileInView={{ scale: 1, opacity: 1 }}
-                      viewport={{ once: true, margin: "-100px" }}
+                      viewport={{ once: true, margin: "-15px" }}
                       transition={{ type: "spring", stiffness: 220, damping: 16, delay: idx * 0.15 }}
                       className={`w-10 h-10 rounded-full border flex items-center justify-center shadow-md transition-all duration-350 cursor-default relative bg-white dark:bg-[#07070a] overflow-hidden ${
                         isCurrent 
